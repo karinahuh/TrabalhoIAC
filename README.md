@@ -1,4 +1,4 @@
-# TrabalhoIAC
+﻿# TrabalhoIAC
 Git do grupo 1 - Trabalho IAC
 
 1 - Baixar o Git:
@@ -37,3 +37,6 @@ Pull -> Desenvolve a feature -> Commit -> confere se ta tudo ok e arruma algo se
 
 -----------------------------------------------------------------
 Quem quiser mais infos: https://tortoisegit.org/docs/tortoisegit/tgit-dug.html.
+
+teste
+
