@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Kleberson's empresa comercial notal 3K</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        function salvarForm(){
+            cad = document.getElementById('desempenho').value + ';' + 
+                    document.getElementById('comportamento').value + ';' + 
+                    document.getElementById('atividade').value + ';' + 
+                    document.getElementById('projeto').value + ';' + 
+                    document.getElementById('pontual').value + ';' + 
+                    document.getElementById('estudo').value;
+            localStorage.setItem(document.getElementById('nome').value , cad);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="questions">            
+            <form action="">
+                <fieldset>
+                <legend>Nome do funcionário:</legend>
+                <input autofocus type="text" name="nome" id="nome" class="input-field" placeholder="Digite o nome" required>
+                </fieldset>
+            </form>
+        
+            <form action="">
+                <fieldset>
+                    <legend>Tem um bom desempenho?</legend>
+                    <input autofocus type="text" name="desempenho" id="desempenho" class="input-field" required>
+                </fieldset>
+            </form>
+        
+            <form action="">
+                <fieldset>
+                    <legend>Bom comportamento?</legend>
+                    <input autofocus type="text" name="comportamento" id="comportamento" class="input-field" required>
+                </fieldset>
+            </form>
+        
+            <form action="">
+                <fieldset>
+                    <legend>Boa pró-atividade?</legend>
+                    <input autofocus type="text" name="atividade" id="atividade" class="input-field" required>
+                </fieldset>
+            </form>
+        
+            <form action="">
+                <fieldset>
+                    <legend>Bom comportamente perante aos projetos e ambiente de trabalho?</legend>
+                    <input autofocus type="text" name="projeto" id="projeto" class="input-field" required>
+                </fieldset>
+            </form>
+        
+            <form action="">
+                <fieldset>
+                    <legend>É pontual?</legend>
+                    <input autofocus type="text" name="pontual" id="pontual" class="input-field" required>
+                </fieldset>
+            </form>
+        
+            <form action="">
+                <fieldset>
+                    <legend>Tem estudo?</legend>
+                    <input autofocus type="text" name="estudo" id="estudo" class="input-field" required>
+                </fieldset>
+            </form>
+        
+            <button id="submit" onclick="salvarForm()">Confirmar</button>
+            
+        </div>
+</body>
+</html>

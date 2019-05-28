@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+        <title>Kleberson's empresa comercial notal 3K</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script>
+            function salvarForm(){
+                if(localStorage.cont)
+                    localStorage.cont = Number(localStorage.cont)+1;
+                else
+                    localStorage.cont = 1;
+                cad = document.getElementById('nome').value + ';' + document.getElementById('idade').value;
+                localStorage.setItem("cad_"+localStorage.cont,cad);
+            }
+        </script>
+</head>
+<body>
+    <input type="text" id="nome" placeholder="nome" />
+    <input type="text" id="idade" placeholder="idade" />
+    <button id="bt-enviar" onclick="salvarForm()">Enviar</button>
+</body>
+</html>
