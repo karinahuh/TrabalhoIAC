@@ -40,7 +40,7 @@ body {
 
 #header {
     text-align: center;
-    padding: 45px 0 20px 40px;
+    padding: 45px 0px 20px 40px;
 }
 
 #header a {
@@ -48,6 +48,14 @@ body {
     text-decoration: none;
     font-size: 30px;
     font-family: "Comic Sans MS", "Arial Narrow";
+}
+
+#login{
+    position: fixed;
+    right: 75px;
+    top: 70px;
+    font-size: 10px;
+
 }
 
 #menu {

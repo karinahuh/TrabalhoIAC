@@ -1,9 +1,11 @@
 ﻿CSS-
 
-index.html(finalizar)
-forms.html(começar)
-feedback.html(começar)
-login.html(começar)
+index.html(finalizar) - feito
+forms.html(começar) - feito (em Survey.html e styleSurveys.css)
+feedback.html(começar) - começado, parei no meio pq já são 1a.m. (Em Feedback.htlm e styelFeedback.css)
+login.html(começar) - sem tempo irmão
+
+TALVEZ TENHA ERRO COM DIFERENTES BROWSERS OU COMPUTADORES (RESOLUÇÃO TELA)
 
 -----------------------------------------------------------------
 HTML/JSON-

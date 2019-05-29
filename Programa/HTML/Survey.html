@@ -1,58 +1,104 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Kleberson's empresa comercial notal 3K</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="../css/styleSurvey.css" />
 </head>
+<style>a {text-decoration-line: none} </style>
 <body>
-    <form action="">
-        <fieldset>
-            <legend>Tem um bom desempenho?</legend>
-            <input type="radio" name="btn" value="sim"> Sim<br>       
-            <input type="radio" name="btn" value="não"> Não<br>
-        </fieldset>
-    </form>
+    <div id="container">
+        <div id="header"> 
+            <a href="index.html">Kleberson's empresa comercial notal 3K</a>
+        </div>    
+        <div id="login">
+            <h1 >
+            <a href="Login.html">Login</a>
+            </h1>
+        </div>
+        <div id="menu"> <a href="index.html">HOME</a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="#">Grupo Hum - Membros</a> &nbsp; &nbsp; &nbsp; &nbsp; </div>
+        <div id="sidebar">
+            <ul>
+            <li><a href="#">Calendário</a></li>
+            <li><a href="#">Funcionários</a></li>
+            <li><a href="#">Metas</a></li>
+            <li><a href="#">Gestão Financeira</a></li>
+            <li><a href="Survey.html">Formulários</a></li>
+            <li><a href="Feedbacks.html">Feedbacks</a></li>
+            </ul>
+        </div>
+        <div id="main">
+                <div id="questions">            
+                        <form action="">
+                            Nome do Funciánrio<br>
+                            <input autofocus type="text" name="nome" id="nome" class="input-field" placeholder="Digite o nome" required>
+                        </form>
 
-    <form action="">
-        <fieldset>
-            <legend>Bom comportamento?</legend>
-            <input type="radio" name="btn" value="sim"> Sim<br>
-            <input type="radio" name="btn" value="não"> Não<br>
-        </fieldset>
-    </form>
+                        <form action="">
+                        Tem um bom desempenho?<br>
+                                <input autofocus type="text" name="desempenho" id="desempenho" class="input-field" placeholder="Desempenho" required>
+  
+                        </form>
 
-    <form action="">
-        <fieldset>
-            <legend>Boa pró-atividade?</legend>
-            <input type="radio" name="btn" value="sim"> Sim<br>
-            <input type="radio" name="btn" value="não"> Não<br>
-        </fieldset>
-    </form>
+                        <form action="">
+                            Bom comportamento?<br>
+                                <input autofocus type="text" name="comportamento" id="comportamento" class="input-field" placeholder="Comportamento" required>
+                        </form>
 
-    <form action="">
-            <fieldset>
-                <legend>Bom comportamente perante aos projetos e ambiente de trabalho?</legend>
-                <input type="radio" name="btn" value="sim"> Sim<br>
-                <input type="radio" name="btn" value="não"> Não<br>
-            </fieldset>
-        </form>
-
-        <form action="">
-                <fieldset>
-                    <legend>É pontual?</legend>
-                    <input type="radio" name="btn" value="sim"> Sim<br>
-                    <input type="radio" name="btn" value="não"> Não<br>
-                </fieldset>
-            </form>
-
-            <form action="">
-                    <fieldset>
-                        <legend>Tem estudo?</legend>
-                        <input type="radio" name="btn" value="sim"> Sim<br>
-                        <input type="radio" name="btn" value="não"> Não<br>
-                    </fieldset>
-                </form>
+                        <form action="">
+                            Boa pró-atividade?<br>
+                                <input autofocus type="text" name="atividade" id="atividade" class="input-field" placeholder="Pró-atividade" required>
+                        </form>
+                    
+                        <form action="">
+                            Bom comportamente perante aos projetos e ambiente de trabalho?<br>
+                                <input autofocus type="text" name="projeto" id="projeto" class="input-field" placeholder="Projetos e ambiente" required>
+                        </form>
+                    
+                        <form action="">
+                            É pontual?<br>
+                                <input autofocus type="text" name="pontual" id="pontual" class="input-field" placeholder="Pontual" required>
+                        </form>
+                    
+                        <form action="">
+                            Tem estudo?<br>
+                                <input autofocus type="text" name="estudo" id="estudo" class="input-field" placeholder="Estudo" required>
+                        </form>
+                    
+                        <button id="submit" onclick="salvarForm()">Confirmar</button>
+                        
+                    </div>
+        
+    </div>
+    <div id="footer"> &copy;2019 Kleberson's &nbsp;<span class="separator">|</span>&nbsp; Design by Grupo Hum</a> </div>
+    <script>
+        var modal = document.getElementById('id01');
+        window.onclick = function(event){
+            if(event.target == modal){
+                modal.style.display = none;
+            }
+        }
+    </script>
 </body>
+<!-- essa porra seria o login
+
+
 </html>
+<div class="w3-container">
+    <div id="id01" class="w3-modal">
+            <div class="w3-modal-content">
+                <header class="w3-container"> 
+                    <span onclick="document.getElementById('id01').style.display='none'" 
+                    class="w3-button w3-display-topleft">&times;</span>
+                    <h2>Login</h2>
+                </header>
+                <div class="w3-container">
+                    <p>You have two options to close this modal:</p>
+                    <p>Click on the "x" or click anywhere outside of the modal!</p>
+                </div>
+
+            </div>
+        </div>
+</div>
+-->
