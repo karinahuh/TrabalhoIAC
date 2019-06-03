@@ -137,3 +137,6 @@ h2 {
     padding: 0px;
     font-family: sans-serif;
 }
+img {
+    margin-top: -100px; 
+}

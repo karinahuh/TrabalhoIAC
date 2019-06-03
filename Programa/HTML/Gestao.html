@@ -4,27 +4,7 @@
 <head>
     <title>Kleberson's empresa comercial notal 3K</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="../css/styleFeedbacks.css" />
-    <script>
-        function loadForm(){
-            var existe = document.getElementById('nome').value;
-            var condicao = false;
-            if(localStorage.getItem(existe)){
-                document.getElementById("answer1").innerHTML += localStorage.getItem(existe);
-                condicao = true;
-            }
-            else
-                myFunction(condicao);
-        }
-        function myFunction(y) {
-            if(y)
-                var x = document.getElementById('snackbar_TRUE');
-            else
-                var x = document.getElementById('snackbar');
-            x.className = "show";
-            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-        }
-    </script>
+    <link rel="stylesheet" type="text/css" href="../css/styleGestao.css" />
 </head>
 <style>a {text-decoration-line: none} </style>
 <body>
@@ -48,22 +28,10 @@
             <li><a href="Feedbacks.html">Feedbacks</a></li>
             </ul>
         </div>
-        <div id="snackbar">Usuario não encontrado.</div>
         <div id="main">
-            <div id="message">            
-                <form action="">
-                        Nome do funcionário a ser pesquisado:
-                        <input autofocus type="text" name="nome" id="nome" class="input-field" placeholder="Digite o nome" required>
-                </form>
-                    
-                <button id="submit" onclick="loadForm()">Confirmar</button>
-                        
-                </div>
-                
-                <h1>
-                    <p id="answer1"> Esses são os resultados para o funcionario procurado: </p>
-                </h1>
-            </div>
+            
+            <img src="../img/graphic.png" alt="graphic">            
+
         </div>
         <div id="footer"> &copy;2019 Kleberson's &nbsp;<span class="separator">|</span>&nbsp; Design by Grupo Hum</a> </div>
     </div>
