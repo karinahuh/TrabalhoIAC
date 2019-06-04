@@ -6,9 +6,17 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="../css/styleFeedbacks.css" />
     <script>
+        var pegou = true;
+        var admin = "admin";
+        if(localStorage.getItem(admin) === "admin"){
+            var x = document.getElementById("mensagem");
+            x.className = "show";
+            var y = document.getElementById("semacesso");
+            y.className = y.className.replace("", "hide");
+        }
         function loadForm(){
             var existe = document.getElementById('nome').value;
-            if(localStorage.getItem(existe)){
+            if(localStorage.getItem(existe) && pegou){
                 //document.getElementById("answer1").innerHTML += localStorage.getItem(existe);
                 var storedData = localStorage.getItem(existe);
                 var arrayString = JSON.parse(storedData);
@@ -22,6 +30,7 @@
                 document.getElementById("answer6").innerHTML += arrayString[6];
                 document.getElementById("answer7").innerHTML += arrayString[7];
                 showMessage();
+                pegou = false;
             }
             else
                 myFunction();
@@ -61,7 +70,7 @@
         </div>
         <div id="snackbar">Usuario não encontrado.</div>
         <div id="main">
-            <div id="message">            
+            <div id="mensagem">            
                 <form action="">
                         Nome do funcionário a ser pesquisado:
                         <input autofocus type="text" name="nome" id="nome" class="input-field" placeholder="Digite o nome" required>
@@ -69,11 +78,9 @@
                     
                 <button id="submit" onclick="loadForm()">Confirmar</button>
                         
-                </div>
                 <div id="resposta">
                     <div> Esses são os resultados para o funcionario procurado: </div>
                     <div id="answerNome">Nome do Funcionário:  </div>
-                    <div> </div>
                     <div id="answer0">Tem um bom desempenho?  </div>
                     <div id="answer1">Tem um bom comportamento?  </div>
                     <div id="answer2">É pró-ativo?  </div>
@@ -102,6 +109,9 @@
 
 
 </html>
+<div id="semacesso">            
+                <div>Você não tem permissão para acessar essa página.</div>
+</div>
 <div class="w3-container">
     <div id="id01" class="w3-modal">
             <div class="w3-modal-content">

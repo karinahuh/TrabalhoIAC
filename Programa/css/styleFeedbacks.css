@@ -105,7 +105,8 @@ h2 {
     color: #444444;
 }
 
-#message {
+#mensagem {
+    visibility: visible;
     font-size: 20px;
 }
 
@@ -187,8 +188,16 @@ h2 {
 }
 
 #resposta.show {
+    visibility: visible;
+}
+
+#semacesso {
     font-size: 20px;
     visibility: visible;
+}
+
+#semacesso.hide {
+    visibility: hidden;
 }
 
 @-webkit-keyframes fadein {
