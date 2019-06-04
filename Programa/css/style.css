@@ -39,14 +39,12 @@ body {
     border-bottom: 2px solid rgba(100, 100, 100, 0.5);
 }
 
-img {
+.logo {
     width: 100%;
-    height: 100px;
 }
 
 #header {
-    text-align: center;
-    width: 1500px;
+
 }
 
 #header a {
@@ -86,17 +84,20 @@ h1 {
 
 h2 {
     color: #3b7687;
-    font-size: 150px;
+    font-size: 100px;
     margin: 20px 0 5px 0;
 }
 
+.home {
+    width: 100%;
+}
+
 #main {
-    padding: 100px 0 100px 200px;
+    padding: 0px 0 0px 160px;
     color: #444444;
     font-family: "Georgia";
     height: 100%;
     font-size: 100px;
-    line-height: 100px;
     text-align: center;
 }
 
