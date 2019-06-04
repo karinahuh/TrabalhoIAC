@@ -126,10 +126,6 @@ h2 {
     width: 100px;
 }
 
-#answer1 {
-    font-size: 20px
-}
-
 #footer {
     position: fixed;
     bottom: 0;
@@ -188,6 +184,9 @@ h2 {
 #resposta {
     font-size: 20px;
     visibility: hidden;
+}
+.resp {
+    font-size: 30px;
 }
 
 #resposta.show {
