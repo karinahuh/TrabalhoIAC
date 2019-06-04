@@ -23,13 +23,23 @@
             document.getElementById('estudo').value,
             document.getElementById('regras').value,
             document.getElementById('diretrizes').value];
-            localStorage.setItem(document.getElementById('nome').value , JSON.stringify(cad));
-            myFunction();
+            
+            for(var i = 0; i < cad.length; i++){
+                if ( cad[i] == null || cad[i] == "" ){
+                    alert("Dados incorretos! Todos os espaços devem ser preenchidos!");
+                    break;
+                }
+                else if(i === cad.length-1){
+                    localStorage.setItem(document.getElementById('nome').value , JSON.stringify(cad));
+                    myFunction();
+                }
+            }
         }
         function myFunction() {
             var x = document.getElementById("snackbar");
             x.className = "show";
             setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+            setTimeout(function(){ window.location.reload(); }, 3500);
         }
     </script>
 </head>
@@ -61,47 +71,47 @@
                 <ul>     
                     <li><form action="">
                         Nome do Funcionário<br>
-                            <input autofocus type="text" name="nome" id="nome" class="input-field" placeholder="Digite o nome" required>
+                            <input autofocus type="text" name="nome" id="nome" class="input-field" placeholder="Digite o nome" required/>
                     </form></li>
 
                     <li><form action="">
                         Tem um bom desempenho?<br>
-                            <input autofocus type="text" name="desempenho" id="desempenho" class="input-field" placeholder="Desempenho" required>
+                            <input autofocus type="text" name="desempenho" id="desempenho" class="input-field" placeholder="Desempenho" required/>
                     </form></li>
 
                     <li><form action="">
                         Bom comportamento?<br>
-                            <input autofocus type="text" name="comportamento" id="comportamento" class="input-field" placeholder="Comportamento" required>
+                            <input autofocus type="text" name="comportamento" id="comportamento" class="input-field" placeholder="Comportamento" required/>
                     </form></li>
 
                     <li><form action="">
                         Boa pró-atividade?<br>
-                            <input autofocus type="text" name="atividade" id="atividade" class="input-field" placeholder="Pró-atividade" required>
+                            <input autofocus type="text" name="atividade" id="atividade" class="input-field" placeholder="Pró-atividade" required/>
                     </form></li>
                     
                     <li><form action="">
                         Bom comportamente perante aos projetos e ambiente de trabalho?<br>
-                            <input autofocus type="text" name="projeto" id="projeto" class="input-field" placeholder="Projetos e ambiente" required>
+                            <input autofocus type="text" name="projeto" id="projeto" class="input-field" placeholder="Projetos e ambiente" required/>
                     </form></li>
                     
                     <li><form action="">
                         É pontual?<br>
-                            <input autofocus type="text" name="pontual" id="pontual" class="input-field" placeholder="Pontual" required>
+                            <input autofocus type="text" name="pontual" id="pontual" class="input-field" placeholder="Pontual" required/>
                     </form></li>
                     
                     <li><form action="">
                         Tem estudo?<br>
-                            <input autofocus type="text" name="estudo" id="estudo" class="input-field" placeholder="Estudo" required>
+                            <input autofocus type="text" name="estudo" id="estudo" class="input-field" placeholder="Estudo" required/>
                     </form></li>
                     
                     <li><form action="">
                         Segue com as regras da empresa?<br>
-                            <input autofocus type="text" name="regras" id="regras" class="input-field" placeholder="Regras" required>
+                            <input autofocus type="text" name="regras" id="regras" class="input-field" placeholder="Regras" required/>
                     </form></li>
 
                     <li><form action="">
                         Segue com as diretrizes da empresa?<br>
-                            <input autofocus type="text" name="diretrizes" id="diretrizes" class="input-field" placeholder="Diretrizes" required>
+                            <input autofocus type="text" name="diretrizes" id="diretrizes" class="input-field" placeholder="Diretrizes" required/>
                     </form></li>
 
                     <button id="submit" onclick="salvarForm()">Confirmar</button>
