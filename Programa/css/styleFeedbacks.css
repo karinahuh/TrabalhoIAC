@@ -15,7 +15,7 @@ body {
 }
 
 #sidebar {
-    position: fixed;
+    position: absolute;
     float: left;
     width: 200px;
     height: 100%;
@@ -127,7 +127,7 @@ h2 {
 }
 
 #footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     height: 2.0rem;
@@ -179,6 +179,16 @@ h2 {
     However, delay the fade out process for 2.5 seconds */
     -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#resposta {
+    font-size: 20px;
+    visibility: hidden;
+}
+
+#resposta.show {
+    font-size: 20px;
+    visibility: visible;
 }
 
 @-webkit-keyframes fadein {

@@ -3,33 +3,119 @@
 
 <head>
     <title>Kleberson's empresa comercial notal 3K</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-</head>
-
-<body>
-    <div id="questions">            
-            <form action="">
-                <fieldset>
-                <legend>Nome do funcionário a ser pesquisado:</legend>
-                <input autofocus type="text" name="nome" id="nome" class="input-field" placeholder="Digite o nome" required>
-                </fieldset>
-            </form>
-        
-            <button id="submit" onclick="loadForm()">Confirmar</button>
-            
-    </div>
-    <h1>
-        <p id="answer1"> Esses são os resultados para o funcionario procurado: </p>;
-    </h1>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="../css/styleFeedbacks.css" />
     <script>
         function loadForm(){
             var existe = document.getElementById('nome').value;
             if(localStorage.getItem(existe)){
-                document.getElementById("answer1").innerHTML += localStorage.getItem(existe);
+                //document.getElementById("answer1").innerHTML += localStorage.getItem(existe);
+                var storedData = localStorage.getItem(existe);
+                var arrayString = JSON.parse(storedData);
+                document.getElementById("answerNome").innerHTML += existe;
+                document.getElementById("answer0").innerHTML += arrayString[0];
+                document.getElementById("answer1").innerHTML += arrayString[1];
+                document.getElementById("answer2").innerHTML += arrayString[2];
+                document.getElementById("answer3").innerHTML += arrayString[3];
+                document.getElementById("answer4").innerHTML += arrayString[4];
+                document.getElementById("answer5").innerHTML += arrayString[5];
+                document.getElementById("answer6").innerHTML += arrayString[6];
+                document.getElementById("answer7").innerHTML += arrayString[7];
+                showMessage();
+            }
+            else
+                myFunction();
+        }
+        function myFunction() {
+            var x = document.getElementById('snackbar');
+            x.className = "show";
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        }
+        function showMessage(){
+            var x = document.getElementById('resposta');
+            x.className = "show";
+        }
+    </script>
+</head>
+<style>a {text-decoration-line: none} </style>
+<body>
+    <div id="container">
+        <div id="header"> 
+            <a href="index.html">Kleberson's empresa comercial notal 3K</a>
+        </div>    
+        <div id="login">
+            <h1 >
+            <a href="Login.html">Login</a>
+            </h1>
+        </div>
+        <div id="menu"> <a href="index.html">HOME</a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="#">Grupo Hum - Membros</a> &nbsp; &nbsp; &nbsp; &nbsp; </div>
+        <div id="sidebar">
+            <ul>
+            <li><a href="index_calendario.html">Calendário</a></li>
+            <li><a href="index_funcionarios.html">Funcionários</a></li>
+            <li><a href="index_metas.html">Metas</a></li>
+            <li><a href="index_gestao.html">Gestão Financeira</a></li>
+            <li><a href="index_survey.html">Formulários</a></li>
+            <li><a href="index_feedbacks.html">Feedbacks</a></li>
+            </ul>
+        </div>
+        <div id="snackbar">Usuario não encontrado.</div>
+        <div id="main">
+            <div id="message">            
+                <form action="">
+                        Nome do funcionário a ser pesquisado:
+                        <input autofocus type="text" name="nome" id="nome" class="input-field" placeholder="Digite o nome" required>
+                </form>
+                    
+                <button id="submit" onclick="loadForm()">Confirmar</button>
+                        
+                </div>
+                <div id="resposta">
+                    <div> Esses são os resultados para o funcionario procurado: </div>
+                    <div id="answerNome">Nome do Funcionário:  </div>
+                    <div> </div>
+                    <div id="answer0">Tem um bom desempenho?  </div>
+                    <div id="answer1">Tem um bom comportamento?  </div>
+                    <div id="answer2">É pró-ativo?  </div>
+                    <div id="answer3">Respeita os projetos e o ambiente de trabalho?  </div>
+                    <div id="answer4">É pontual?  </div>
+                    <div id="answer5">Tem estudos na area em que trabalha?  </div>
+                    <div id="answer6">Respeita as regras da empresa?  </div>
+                    <div id="answer7">Segue todas as diretrizes da empresa?  </div>
+                </div>
+            </div>
+            
+        </div>
+        <div id="footer"> &copy;2019 Kleberson's &nbsp;<span class="separator">|</span>&nbsp; Design by Grupo Hum</a> </div>
+    </div>
+    
+    <script>
+        var modal = document.getElementById('id01');
+        window.onclick = function(event){
+            if(event.target == modal){
+                modal.style.display = none;
             }
         }
     </script>
 </body>
+<!-- essa porra seria o login
+
+
 </html>
+<div class="w3-container">
+    <div id="id01" class="w3-modal">
+            <div class="w3-modal-content">
+                <header class="w3-container"> 
+                    <span onclick="document.getElementById('id01').style.display='none'" 
+                    class="w3-button w3-display-topleft">&times;</span>
+                    <h2>Login</h2>
+                </header>
+                <div class="w3-container">
+                    <p>You have two options to close this modal:</p>
+                    <p>Click on the "x" or click anywhere outside of the modal!</p>
+                </div>
+
+            </div>
+        </div>
+</div>
+-->
