@@ -7,14 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../css/styleSurvey.css" />
     <script>
         function salvarForm(){
-            /*
-            cad = document.getElementById('desempenho').value + ';' + 
-                document.getElementById('comportamento').value + ';' + 
-                document.getElementById('atividade').value + ';' + 
-                document.getElementById('projeto').value + ';' + 
-                document.getElementById('pontual').value + ';' + 
-                document.getElementById('estudo').value;
-            */
+
             cad = [document.getElementById('desempenho').value, 
             document.getElementById('comportamento').value, 
             document.getElementById('atividade').value, 
@@ -48,14 +41,9 @@
     <div id="snackbar">Informações recebidas com sucesso!</div>
     <div id="container">
         <div id="header"> 
-            <a href="index.html"> <img src="../img/logo2.jpg" alt="logo" class="logo"></a>
+            <a href="index_login.html"> <img src="../img/logo2.jpg" alt="logo" class="logo"></a>
         </div>  
-        <div id="login">
-            <h1 >
-            <a href="Login.html">Login</a>
-            </h1>
-        </div>
-        <div id="menu"> <a href="index.html">HOME</a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="#">Grupo Hum - Membros</a> &nbsp; &nbsp; &nbsp; &nbsp; </div>
+        <div id="menu"> <a href="index_login.html">HOME</a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="#">Grupo Hum - Membros</a> &nbsp; &nbsp; &nbsp; &nbsp; </div>
         <div id="sidebar">
             <ul>
             <li><a href="index_calendario.html">Calendário</a></li>
@@ -122,33 +110,4 @@
         
     </div>
     <div id="footer"> &copy;2019 Kleberson's &nbsp;<span class="separator">|</span>&nbsp; Design by Grupo Hum</a> </div>
-    <script>
-        var modal = document.getElementById('id01');
-        window.onclick = function(event){
-            if(event.target == modal){
-                modal.style.display = none;
-            }
-        }
-    </script>
 </body>
-<!-- essa porra seria o login
-
-
-</html>
-<div class="w3-container">
-    <div id="id01" class="w3-modal">
-            <div class="w3-modal-content">
-                <header class="w3-container"> 
-                    <span onclick="document.getElementById('id01').style.display='none'" 
-                    class="w3-button w3-display-topleft">&times;</span>
-                    <h2>Login</h2>
-                </header>
-                <div class="w3-container">
-                    <p>You have two options to close this modal:</p>
-                    <p>Click on the "x" or click anywhere outside of the modal!</p>
-                </div>
-
-            </div>
-        </div>
-</div>
--->
